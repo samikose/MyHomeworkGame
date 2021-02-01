@@ -8,9 +8,9 @@ namespace MyHomeworkGame
         static void Main(string[] args)
         {
             Player player = new Player();
-            player.FirstName = "Sami";
-            player.LastName = "Kose";
-            player.Tc = 37018039180;
+            player.FirstName = "SAMİ";
+            player.LastName = "KÖSE";
+            player.Tc = 12345678900;
             player.BirthYear = 2002;
 
             PlayerManager playerManager = new PlayerManager(new UserValidationManager());
