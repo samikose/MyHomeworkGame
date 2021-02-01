@@ -11,11 +11,12 @@ namespace MyHomeworkGame
             player.FirstName = "Sami";
             player.LastName = "Kose";
             player.Tc = 37018039180;
+            player.BirthYear = 2002;
 
-            PlayerManager playerManager = new PlayerManager();
-            playerManager.Add();
-            playerManager.Delete();
-            playerManager.Update();
+            PlayerManager playerManager = new PlayerManager(new UserValidationManager());
+            playerManager.Add(player);
+            playerManager.Delete(player);
+            playerManager.Update(player);
             playerManager.InformationList(player);
 
             Game game = new Game();
