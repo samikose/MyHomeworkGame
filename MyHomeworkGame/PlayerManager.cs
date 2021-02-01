@@ -4,11 +4,23 @@ using System.Text;
 
 namespace MyHomeworkGame
 {
-    class PlayerManager
+    class PlayerManager:IPlayerService
     {
-        public void Add()
+        IUserValidate _userValidateService;
+        public PlayerManager(IUserValidateService userValidateService)
         {
-            Console.WriteLine("Hesap eklendi");
+           _userValidateService = userValidateService;
+        }
+        public void Add(Player)
+        {
+           if(_userValidateService.Validate(player)==true)
+           {
+               Console.WriteLine("Hesap eklendi");
+           }
+           else
+           {
+               Console.WriteLine("Doğrulama başarısız.Hesap eklenemedi");
+           }
         }
 
         public void Delete()
